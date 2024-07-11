@@ -1,0 +1,16 @@
+include /home/lapepega/.config/nano/syntax/*
+
+set linenumbers
+set autoindent
+set mouse
+set tabstospaces
+set tabsize 4
+set zap
+set nohelp
+
+bind ^C copy	main
+bind ^V paste	main
+bind ^F whereis main
+bind ^Z undo	main
+bind ^U redo    main
+bind ^H replace main
