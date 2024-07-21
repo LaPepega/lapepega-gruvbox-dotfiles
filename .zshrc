@@ -47,7 +47,9 @@ alias cll='cls;l'
 alias rr='rm -fr'
 alias cp='cp -fr'
 
-alias !='doas'
+alias sudo='doas'
+alias ! ='doas'
+alias cat='bat'
 
 alias nano='nano --rcfile ~/.config/nano/nanorc'
 alias grep='grep --color=auto'
@@ -56,9 +58,28 @@ alias opn="xdg-open"
 alias nn="nano"
 alias fox='firefox'
 alias clip="xclip -selection clipboard"
+scrt() {scrot -s '/home/lapepega/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png' -e 'xclip -selection clipboard -t image/png -i $f'}
+scrt0() {scrot -s '/home/lapepega/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png' -e '0x0 file $f' | xclip -selection clipboard}
 alias a='atool'
 alias x='exit'
 alias ncode='nix-shell --command "code .;exit"'
+
+alias pacss='doas pacman -Ss'
+alias pacs='doas pacman -S'
+alias pacr='doas pacman -R'
+alias pacu='doas pacman -Syu'
+
+alias yays='yay -S'
+alias yayr='yay -R'
+alias yayss='yay -Ss'
+alias yayu='yay -Syu'
+
+alias upd='pacu && yayu'
+
+alias proton='STEAM_COMPAT_DATA_PATH=~/.prtn STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.prtn /home/lapepega/.steam/steam/steamapps/common/Proton\ -\ Experimental/proton run '
+alias protonGE='STEAM_COMPAT_DATA_PATH=~/.prtn-ge STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.prtn-ge /usr/share/steam/compatibilitytools.d/proton-ge-custom/proton run '
+alias prtnGE='protonGE'
+alias prtn='proton'
 
 fnd() { doas find / -name $1}
 mkcd() { mkdir $1 && cd $1; }
