@@ -48,7 +48,7 @@ alias rr='rm -fr'
 alias cp='cp -fr'
 
 alias sudo='doas'
-alias ! ='doas'
+alias !='doas'
 alias cat='bat'
 
 alias nano='nano --rcfile ~/.config/nano/nanorc'
@@ -84,7 +84,7 @@ alias prtn='proton'
 fnd() { doas find / -name $1}
 mkcd() { mkdir $1 && cd $1; }
 det() { $@ &;disown }
-lk() { cdl "$(walk "$@")" }
+lk() { 'cd' "$(EDITOR=nano walk --icons --fuzzy "$@")" && clear && l }
 
 mnt() { doas mkdir /mnt/$1 && doas mount /dev/$1 /mnt/$1 || doas rm -fr /mnt/$1 }
 umnt() { doas umount /mnt/$1 && doas rm -fr /mnt/$1; }

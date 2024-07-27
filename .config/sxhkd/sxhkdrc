@@ -34,8 +34,14 @@ super + {q,k}
 
 
 
-super + {t,p,v,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {p,f}
+	bspc node -t {pseudo_tiled,fullscreen}
+
+super + t
+    bspc node -t tiled; bspc node -g sticky=off
+	
+super + v
+    bspc node -t floating; bspc node -g sticky=on
 
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
