@@ -43,6 +43,7 @@ l() {
 
 alias cls='clear'
 alias cll='cls;l'
+alias vpn='doas openvpn'
 
 alias rr='rm -fr'
 alias cp='cp -fr'
@@ -50,7 +51,7 @@ alias cp='cp -fr'
 alias sudo='doas'
 alias !='doas'
 alias cat='bat'
-
+alias slp='xset dpms force off'
 alias nano='nano --rcfile ~/.config/nano/nanorc'
 alias grep='grep --color=auto'
 alias wget="wget --hsts-file=\"$HOME/.etc/wget-hsts\""
@@ -58,6 +59,7 @@ alias opn="xdg-open"
 alias nn="nano"
 alias fox='firefox'
 alias clip="xclip -selection clipboard"
+alias slp='xset dpms force off'
 scrt() {scrot -s '/home/lapepega/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png' -e 'xclip -selection clipboard -t image/png -i $f'}
 scrt0() {scrot -s '/home/lapepega/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png' -e '0x0 file $f' | xclip -selection clipboard}
 alias a='atool'

@@ -25,3 +25,6 @@ bspc rule -a Toolkit state=floating sticky=on
 bspc rule -a steam desktop=^4 follow=off focus=off
 bspc rule -a code deskop=^1 follow=on focus=on
 bspc rule -a discord desktop=^3 follow=on focus=on
+
+bspc rule -a Element desktop=^3 follow=on focus=on
+bspc rule -a element desktop=^3 follow=on focus=on
