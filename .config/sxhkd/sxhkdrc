@@ -2,7 +2,7 @@ super + Return
 	kitty -e tmux
 
 alt + F1
-	rofi -show drun
+	rofi -modes "drun,calc,window" -show drun
 
 super + w
 	firefox
