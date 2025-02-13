@@ -1,0 +1,7 @@
+[user]
+	email = tmv03092008@gmail.com
+	name = LaPepega
+[pull]
+	rebase = false
+[credential]
+	helper = store
