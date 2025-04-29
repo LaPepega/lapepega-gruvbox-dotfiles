@@ -2,13 +2,17 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 polybar &
-ksuperkey
+ksuperkey &
+otd-daemon &
+./combio.sh &
 
 feh --bg-fill --no-fehbg ~/.config/wallpaper.png
 setxkbmap -option grp:alt_shift_toggle us,ru
 
 xinput set-prop "10" "Coordinate Transformation Matrix" 1.3 0 0 0 1.3 0 0 0 1
 xinput set-prop "10" "libinput Accel Profile Enabled" 0 1 0
+
+#xcape -e Caps_Lock=Shift_L
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 

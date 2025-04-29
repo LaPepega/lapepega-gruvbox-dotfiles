@@ -48,9 +48,9 @@ alias vpn='doas openvpn'
 alias rr='rm -fr'
 alias cp='cp -fr'
 
-alias sudo='doas'
+#alias sudo='doas'
 alias !='doas'
-alias cat='bat'
+#alias cat='bat'
 alias slp='xset dpms force off'
 alias nano='nano --rcfile ~/.config/nano/nanorc'
 alias grep='grep --color=auto'
@@ -93,8 +93,8 @@ umnt() { doas umount /mnt/$1 && doas rm -fr /mnt/$1; }
 
 eval "$(zoxide init zsh)"
 zl() { z $@ && clear && l}
-alias cd='z'
-cdl() { z $@ && clear && l }
+#alias cd='z'
+cdl() { cd $@ && clear && l }
 
 
 autoload -Uz compinit
