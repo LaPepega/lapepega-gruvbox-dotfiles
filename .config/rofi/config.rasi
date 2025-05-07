@@ -5,6 +5,7 @@ configuration {
     display-window: "";
     display-combi:  "";
     show-icons:     true;
+    font: "Anonymous Pro 13";
 }
 
 @theme "~/.config/rofi/gruvbox-material.rasi"

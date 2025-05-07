@@ -2,7 +2,7 @@ super + Return
 	kitty -e tmux
 
 alt + F1
-	rofi -modes "drun,calc,window" -show drun
+     rofi -modes "drun,calc,window" -show drun -font "Anonymous Pro 13"
 
 super + w
 	firefox
@@ -82,10 +82,10 @@ super + alt + {Left,Right}
 
 
 XF86AudioLowerVolume
-    pactl set-sink-volume 59 -5%
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
   
 XF86AudioRaiseVolume 
-    pactl set-sink-volume 59 +5%
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
   
 XF86AudioMute
-    pactl set-sink-mute 59 toggle
+    pactl set-sink-mute @DEFAULT_SINK@ toggle

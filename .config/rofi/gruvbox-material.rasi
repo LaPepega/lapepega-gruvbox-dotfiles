@@ -6,6 +6,7 @@
  */
 
 * {
+    font: "Anonymous Pro 13";
 	gruv0: #282828;
 	gruv1: #32302f;
 	gruv2: #45403d;
