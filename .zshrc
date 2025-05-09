@@ -48,8 +48,7 @@ alias vpn='doas openvpn'
 alias rr='rm -fr'
 alias cp='cp -fr'
 
-#alias sudo='doas'
-alias !='doas'
+alias d='doas'
 #alias cat='bat'
 alias slp='xset dpms force off'
 alias nano='nano --rcfile ~/.config/nano/nanorc'
@@ -57,6 +56,7 @@ alias grep='grep --color=auto'
 alias wget="wget --hsts-file=\"$HOME/.etc/wget-hsts\""
 alias opn="xdg-open"
 alias nn="nano"
+alias nv='nvim'
 alias fox='firefox'
 alias clip="xclip -selection clipboard"
 alias slp='xset dpms force off'
