@@ -31,6 +31,11 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/trouble.nvim'
 
+"Plug 'jmcantrell/vim-virtualenv'
+
+Plug 'mason-org/mason.nvim'
+"Plug 'linux-cultist/venv-selector.nvim'
+
 call plug#end()
 
 set background=dark
@@ -58,6 +63,9 @@ lua require "lsp_signature".setup({})
 lua require 'nvim-tree'.setup({})
 lua require 'trouble'.setup({})
 lua require 'dapui'.setup()
+lua require 'mason'.setup()
+"lua require 'venv-selector'.setup()
+
 
 lua <<EOF
   -- Set up nvim-cmp.
