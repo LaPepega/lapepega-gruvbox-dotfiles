@@ -41,6 +41,8 @@ Plug 'sudormrfbin/cheatsheet.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'hiphish/rainbow-delimiters.nvim'
 
+Plug 'rbong/vim-flog'
+
 call plug#end()
 
 set background=dark
