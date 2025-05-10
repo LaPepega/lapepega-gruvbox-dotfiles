@@ -30,11 +30,16 @@ Plug 'ray-x/lsp_signature.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/trouble.nvim'
-
+Plug 'stevearc/conform.nvim'
 "Plug 'jmcantrell/vim-virtualenv'
 
 Plug 'mason-org/mason.nvim'
 "Plug 'linux-cultist/venv-selector.nvim'
+
+Plug 'm4xshen/autoclose.nvim'
+Plug 'sudormrfbin/cheatsheet.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'hiphish/rainbow-delimiters.nvim'
 
 call plug#end()
 
@@ -59,50 +64,22 @@ set wildignorecase
 set ignorecase
 set pumheight=10
 
-lua require "lsp_signature".setup({})
-lua require 'nvim-tree'.setup({})
-lua require 'trouble'.setup({})
+lua require "lsp_signature".setup()
+lua require 'nvim-tree'.setup()
+lua require 'trouble'.setup()
 lua require 'dapui'.setup()
 lua require 'mason'.setup()
+lua require 'autoclose'.setup()
+lua require 'ibl'.setup()
+lua require 'rainbow-delimiters.setup'.setup()
+
+lua require 'lspconfig'.rust_analyzer.setup{}
+lua require 'lspconfig'.vimls.setup{}
+lua require 'lspconfig'.pyright.setup{}
+lua require 'lspconfig'.clangd.setup{}
+lua require 'lspconfig'.lua_ls.setup{}
+lua require 'lspconfig'.dockerls.setup{}
+"lua require 'lspconfig'.jsonls.setup{}
 "lua require 'venv-selector'.setup()
 
-
-lua <<EOF
-  -- Set up nvim-cmp.
-  local cmp = require'cmp'
-  
-  vim.lsp.enable('pyright')
-  vim.lsp.enable('vimls')
-
-  cmp.setup({
-    snippet = {
-      -- REQUIRED - you must specify a snippet engine
-      expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-        
-      end,
-    },
-    window = {
-      -- completion = cmp.config.window.bordered(),
-      -- documentation = cmp.config.window.bordered(),
-    },
-    mapping = cmp.mapping.preset.insert({
-      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-      ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.abort(),
-      ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
-    sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
-      { name = 'path' }, 
-      -- { name = 'luasnip' }, -- For luasnip users.
-      -- { name = 'ultisnips' }, -- For ultisnips users.
-      -- { name = 'snippy' }, -- For snippy users.
-    }, {
-      { name = 'buffer' },
-    })
-  })
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-EOF
+lua require('initfile')
