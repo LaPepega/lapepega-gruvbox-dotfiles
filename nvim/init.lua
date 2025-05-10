@@ -32,7 +32,21 @@ cmp.setup({
 
 require 'conform'.setup({
     formatters_by_ft = {
-        python = { "black" },
+        python     = { "black" },
+        angular    = { "prettier" },
+        css        = { "prettier" },
+        flow       = { "prettier" },
+        graphql    = { "prettier" },
+        html       = { "prettier" },
+        json       = { "prettier" },
+        jsx        = { "prettier" },
+        javascript = { "prettier" },
+        less       = { "prettier" },
+        markdown   = { "prettier" },
+        scss       = { "prettier" },
+        vue        = { "prettier" },
+        yaml       = { "prettier" },
+        typescript = { "prettier" },
     },
     default_format_opts = {
         lsp_format = "fallback",

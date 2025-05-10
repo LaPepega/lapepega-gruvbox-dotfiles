@@ -81,6 +81,12 @@ lua require 'lspconfig'.pyright.setup{}
 lua require 'lspconfig'.clangd.setup{}
 lua require 'lspconfig'.lua_ls.setup{}
 lua require 'lspconfig'.dockerls.setup{}
+lua require 'lspconfig'.ts_ls.setup{}
+lua require 'lspconfig'.html.setup{}
+lua require 'lspconfig'.cssls.setup{}
+lua require'lspconfig'.tailwindcss.setup{}
+
+
 "lua require 'lspconfig'.jsonls.setup{}
 "lua require 'venv-selector'.setup()
 
