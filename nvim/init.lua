@@ -1,3 +1,6 @@
+local vimrc = vim.fn.stdpath("config") .. "/nvimrc.vim"
+vim.cmd.source(vimrc)
+
 vim.lsp.enable('omnisharp-mono')
 vim.lsp.enable('omnisharp')
 vim.lsp.enable('docker_compose_language_service')

@@ -82,4 +82,3 @@ lua require 'lspconfig'.dockerls.setup{}
 "lua require 'lspconfig'.jsonls.setup{}
 "lua require 'venv-selector'.setup()
 
-lua require('initfile')
