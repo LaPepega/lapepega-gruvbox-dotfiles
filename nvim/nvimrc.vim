@@ -84,7 +84,8 @@ lua require 'lspconfig'.dockerls.setup{}
 lua require 'lspconfig'.ts_ls.setup{}
 lua require 'lspconfig'.html.setup{}
 lua require 'lspconfig'.cssls.setup{}
-lua require'lspconfig'.tailwindcss.setup{}
+lua require 'lspconfig'.bashls.setup{}
+lua require 'lspconfig'.tailwindcss.setup{}
 
 
 "lua require 'lspconfig'.jsonls.setup{}
