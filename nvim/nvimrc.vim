@@ -42,7 +42,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'hiphish/rainbow-delimiters.nvim'
 
 Plug 'rbong/vim-flog'
-
+Plug 'rafamadriz/friendly-snippets'
 call plug#end()
 
 set background=dark
@@ -65,6 +65,9 @@ set smarttab
 set wildignorecase
 set ignorecase
 set pumheight=10
+set foldmethod=syntax
+set foldlevel=99
+set colorcolumn=80
 
 lua require "lsp_signature".setup()
 lua require 'nvim-tree'.setup()
@@ -86,6 +89,7 @@ lua require 'lspconfig'.html.setup{}
 lua require 'lspconfig'.cssls.setup{}
 lua require 'lspconfig'.bashls.setup{}
 lua require 'lspconfig'.tailwindcss.setup{}
+lua require 'lspconfig'.markdown_oxide.setup{}
 
 
 "lua require 'lspconfig'.jsonls.setup{}

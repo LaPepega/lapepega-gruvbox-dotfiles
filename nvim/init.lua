@@ -47,11 +47,16 @@ require 'conform'.setup({
         vue        = { "prettier" },
         yaml       = { "prettier" },
         typescript = { "prettier" },
+        cpp        = { "clang_format" },
     },
     default_format_opts = {
         lsp_format = "fallback",
     },
-
+    formatters = {
+        clang_format = {
+            prepend_args = { "--style", "WebKit" },
+        },
+    },
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
@@ -60,3 +65,21 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         require("conform").format({ bufnr = args.buf })
     end,
 })
+
+local dap = require("dap")
+local ui = require("dapui")
+
+ui.setup()
+
+dap.listeners.before.attach.dapui_config = function()
+    ui.open()
+end
+dap.listeners.before.launch.dapui_config = function()
+    ui.open()
+end
+dap.listeners.before.event_terminated.dapui_config = function()
+    ui.close()
+end
+dap.listeners.before.event_exited.dapui_config = function()
+    ui.close()
+end
