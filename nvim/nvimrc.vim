@@ -43,6 +43,8 @@ Plug 'hiphish/rainbow-delimiters.nvim'
 
 Plug 'rbong/vim-flog'
 Plug 'rafamadriz/friendly-snippets'
+
+Plug 'jay-babu/mason-nvim-dap.nvim'
 call plug#end()
 
 set background=dark

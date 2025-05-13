@@ -69,6 +69,55 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 local dap = require("dap")
 local ui = require("dapui")
 
+local mason_dap = require("mason-nvim-dap")
+
+mason_dap.setup({
+    ensure_installed = { "codelldb" },
+    automatic_installation = true,
+    handlers = {
+        function(config)
+            require("mason-nvim-dap").default_setup(config)
+        end,
+    },
+})
+
+dap.configurations = {
+    cpp = {
+        {
+            name = "Launch file",
+            type = "codelldb",
+            request = "launch",
+            program = function()
+                return vim.fn.input(
+                    "Path to executable: ",
+                    vim.fn.getcwd() .. "/",
+                    "file"
+                )
+            end,
+            cwd = "${workspaceFolder}",
+            stopAtEntry = false,
+            MIMode = "lldb",
+        },
+        {
+            name = "Attach to lldbserver :1234",
+            type = "codelldb",
+            request = "launch",
+            MIMode = "lldb",
+            miDebuggerServerAddress = "localhost:1234",
+            miDebuggerPath = "/usr/bin/lldb",
+            cwd = "${workspaceFolder}",
+            program = function()
+                return vim.fn.input(
+                    "Path to executable: ",
+                    vim.fn.getcwd() .. "/",
+                    "file"
+                )
+            end,
+        },
+    },
+}
+
+
 ui.setup()
 
 dap.listeners.before.attach.dapui_config = function()
