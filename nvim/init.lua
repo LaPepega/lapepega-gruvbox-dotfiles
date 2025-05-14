@@ -116,7 +116,7 @@ dap.configurations = {
         },
     },
 }
-
+dap.configurations.c = dap.configurations.cpp
 
 ui.setup()
 
