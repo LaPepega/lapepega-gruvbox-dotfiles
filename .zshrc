@@ -82,6 +82,7 @@ alias proton='STEAM_COMPAT_DATA_PATH=~/.prtn STEAM_COMPAT_CLIENT_INSTALL_PATH=~/
 alias protonGE='STEAM_COMPAT_DATA_PATH=~/.prtn-ge STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.prtn-ge /usr/share/steam/compatibilitytools.d/proton-ge-custom/proton run '
 alias prtnGE='protonGE'
 alias prtn='proton'
+alias gitfuck='git add -A && git commit -m $(date +%Y-%m-%d) && git push'
 
 fnd() { doas find / -name $1}
 mkcd() { mkdir $1 && cd $1; }
