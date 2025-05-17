@@ -41,6 +41,8 @@ l() {
         echo '';
 }
 
+alias ll='ls -l'
+
 alias cls='clear'
 alias cll='cls;l'
 alias vpn='doas openvpn'
