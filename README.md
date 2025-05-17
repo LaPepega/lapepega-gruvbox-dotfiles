@@ -3,6 +3,10 @@ My arch linux bspwm gruvbox rice.
 
 ## Screenshots
 
+![Many windows](https://github.com/LaPepega/dotfiles/blob/main/screenshots/manywindows.png)
+![Clean screen](https://github.com/LaPepega/dotfiles/blob/main/screenshots/clean.png)
+![Rofi](https://github.com/LaPepega/dotfiles/blob/main/screenshots/rofi.png)
+
 ## Included configs
   - `bspwm`
   - `polybar`
@@ -22,6 +26,8 @@ My arch linux bspwm gruvbox rice.
 [`.config/wallpaper.png`](https://github.com/LaPepega/dotfiles/blob/main/.config/wallpaper.png) - wallpaper made by me ( yes it's a Murder Drones reference )
 
 [`scripts/combio.sh`](https://github.com/LaPepega/dotfiles/blob/main/scripts/combio.sh) - a script I use to set up a `pulseaudio` output sink that combines my system sound and my mic's input. Useful for streaming on discord or element ( or any other program that doesn't support X11 sound streaming properly ).
+
+The font used everywhere: Anonymous Pro
 
 # Installation
 
