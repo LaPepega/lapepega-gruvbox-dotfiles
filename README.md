@@ -1,7 +1,7 @@
 # Dotfiles
 My arch linux bspwm gruvbox rice.
 
-## Scrrenshots
+## Screenshots
 
 ## Included configs
   - `bspwm`
