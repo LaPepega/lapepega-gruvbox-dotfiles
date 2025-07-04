@@ -7,12 +7,17 @@ alt + F1
 super + w
 	firefox
 
+super + d
+    discord --proxy-server="socks4://127.0.0.1:1080"
+
+super + m
+    arandr
+
 super + {shift,ctrl} + x
 	doas shutdown -{h,r} now
 
 super + F1
     pavucontrol
-
 
 Print
     scrot -s '/home/lapepega/Pictures/Screenshots/%Y-%m-%d_%H:%M:%S.png' -e 'xclip -selection clipboard -t image/png -i $f'

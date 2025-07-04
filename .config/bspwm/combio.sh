@@ -1,1 +1,1 @@
-/home/lapepega/dotfiles/combio.sh
+/home/lapepega/dotfiles/scripts/combio.sh
