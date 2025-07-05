@@ -86,13 +86,15 @@ alias proton='STEAM_COMPAT_DATA_PATH=~/.prtn STEAM_COMPAT_CLIENT_INSTALL_PATH=~/
 alias protonGE='STEAM_COMPAT_DATA_PATH=~/.prtn-ge STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.prtn-ge gamemoderun /usr/share/steam/compatibilitytools.d/proton-ge-custom/proton run '
 alias prtnGE='protonGE'
 alias prtn='proton'
+alias umu-spacewar='WINEPREFIX="/home/lapepega/Games/480" WINEDLLOVERRIDES="OnlineFix64=n;SteamOverlay64=n;winmm=n,b;dnet=n;steam\_api64=n" GAMEID=480 PROTONPATH="/home/lapepega/.steam/steam/steamapps/common/Proton\ -\ Experimental" umu-run'
+
 alias gitfuck='git add -A && git commit -m $(date +%Y-%m-%d) && git push'
 
 alias ytdl='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" --output "%(playlist_index)s. %(title)s .%(ext)s"'
 alias ytdl-mp3='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(playlist_index)s. %(title)s .%(ext)s"'
-alias ytdl-all='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" --output "%(uploader)s/%(playlist)s/%(playlist_index)s. %(title)s .%(ext)s"'
-alias ytdl-all-mp3='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(uploader)s/%(playlist)s/%(playlist_index)s. %(title)s .%(ext)s"'
-alias ytdl-topic='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(artist)s/%(album)s/%(track_number)s. %(title)s .%(ext)s"'
+alias ytdl-plist='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --format "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" --output "%(playlist)s/%(playlist_index)s. %(title)s .%(ext)s"'
+alias ytdl-plist-mp3='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(playlist)s/%(playlist_index)s. %(title)s .%(ext)s"'
+alias ytdl-topic='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(artist)s/%(album)s/%(playlist_index)s. %(title)s .%(ext)s"'
 
 fnd() { doas find / -name $1}
 mkcd() { mkdir $1 && cd $1; }
