@@ -29,6 +29,7 @@ bindkey "^[[B" history-beginning-search-forward
 # Aliases
 alias renix="sudo nixos-rebuild switch"
 alias ls='ls --color=auto --group-directories-first'
+alias diff='diff --color=always'
 
 l() {
         if [ $# -eq 0 ]
@@ -96,7 +97,7 @@ alias ytdl-plist='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --emb
 alias ytdl-plist-mp3='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(playlist)s/%(playlist_index)s. %(title)s .%(ext)s"'
 alias ytdl-topic='yt-dlp --proxy "socks://127.0.0.1:1080" --embed-chapters --embed-subs --output-na-placeholder "00" --extract-audio --audio-format mp3 --audio-quality 0 --output "%(artist)s/%(album)s/%(playlist_index)s. %(title)s .%(ext)s"'
 
-fnd() { doas find / -name $1}
+fnd() { doas find / -name $@}
 mkcd() { mkdir $1 && cd $1; }
 det() { $@ &;disown }
 lk() { 'cd' "$(EDITOR=nano walk --icons --fuzzy "$@")" && clear && l }
@@ -105,7 +106,12 @@ mnt() { doas mkdir /mnt/$1 && doas mount /dev/$1 /mnt/$1 || doas rm -fr /mnt/$1 
 umnt() { doas umount /mnt/$1 && doas rm -fr /mnt/$1; }
 
 eval "$(zoxide init zsh)"
+
+alias zq='zoxide query'
+
 zl() { z $@ && clear && l}
+lz() { l $(zoxide query $@)}
+
 #alias cd='z'
 cdl() { cd $@ && clear && l }
 
